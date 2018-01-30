@@ -27,11 +27,26 @@ File.prototype.equals = function(file){
 };
 
 File.prototype.save = function(update){
-	update = typeof update === 'undefined'? true : update; 
+	update = typeof update === 'undefined'? true : update;
 	if(Array.isArray(File.list)){
 		var index = File.indexOf(this);
 		if(~index && update) {
-			File.list[index] = this; 
+			File.list[index] = this;
+			console.warn('File `%s` has been loaded before and updated now for: %O.', this.url, this);
+		}else File.list.push(this);
+		console.log(File.list)
+	}else{
+		File.list = [this];
+	}
+	return this;
+};
+
+File.prototype.save2 = function(update){
+	update = typeof update === 'undefined'? true : update;
+	if(Array.isArray(File.list)){
+		var index = File.indexOf(this);
+		if(~index && update) {
+			File.list[index] = this;
 			console.warn('File `%s` has been loaded before and updated now for: %O.', this.url, this);
 		}else File.list.push(this);
 		console.log(File.list)
