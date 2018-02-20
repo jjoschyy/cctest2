@@ -1,0 +1,8 @@
+/*
+ * CSS style for view page resources/views/admin/user/list.blade.php 
+ *
+*/
+
+table td.table-options a {
+    margin-bottom: 5px;
+}

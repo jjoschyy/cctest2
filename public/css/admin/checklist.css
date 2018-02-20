@@ -1,0 +1,36 @@
+
+.checklistBase {
+    margin-bottom:0px;
+}
+
+.checklistVAL {
+    height: 33px;
+    margin-bottom:16px;
+    padding-left:20px;
+    padding-top:14px;
+}
+
+.checklistMW.input-group-addon {
+    font-weight: bold;
+    color: white;
+    height:58px;
+    align-items: center;
+    display: inline-flex;
+}
+
+#longTextArea {
+    height: 10em;
+}
+
+.checkbox-rounded [type="checkbox"][class*='filled-in']+label:after {
+    border-radius: 50%;
+}
+
+[type="checkbox"][class*='filled-in']:checked+label:after {
+    border-color: #00C851;
+    background-color: #00C851;
+}
+
+.md-form label.checklist_mw_label, .md-form label.checklist_input_label {
+    top: 1.7rem;
+}
